@@ -10,7 +10,6 @@ Vagrant.configure("2") do |config|
     docker.vm.network "forwarded_port", guest:3000, host:3000
     docker.vm.network "forwarded_port", guest:3001, host:3001
     docker.vm.network "forwarded_port", guest:27017, host:27017
-    docker.vm.synced_folder "~/dockersite", "/home/vagrant/dockersite"
     docker.vm.synced_folder "site-cookbooks/", "/home/vagrant/cd-nginx/chef/site-cookbooks"
     docker.vm.synced_folder "shell/", "/home/vagrant/shell"
     docker.vm.synced_folder "docker/", "/home/vagrant/docker"
