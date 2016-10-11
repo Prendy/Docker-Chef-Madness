@@ -10,6 +10,8 @@ services:
     - andrew-api
     depends_on:
     - andrew-api
+    environment:
+    - PAPI_URL = localhost:3001  
     # - my-nodejs
   andrew-api:
     build: ./my-node-api/
