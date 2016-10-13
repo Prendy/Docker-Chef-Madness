@@ -21,6 +21,8 @@ services:
     - andrew-db
     depends_on:
     - andrew-db
+    environment:
+    - MONGO_URL=$MONGO_URL_AWS
     # - my-nodejs
   andrew-db:
     build: ./my-mongodb
